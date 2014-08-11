@@ -5,4 +5,4 @@ Scenario:Enter on Idealista
 	When I press the button "linkAnuncioGratis"
     Then I must see the button "linkVamosAlla"
 	Given the user press the button "linkVamosAlla"
-	Then I must see the button "linkDoLogin"
+	Then I must see the button id "linkDoLogin"

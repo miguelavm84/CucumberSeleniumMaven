@@ -16,92 +16,92 @@ formatter.scenario({
 });
 formatter.step({
   "line": 4,
-  "name": "the user gets in on the webpage \"http://www.idealista.es\"",
+  "name": "the user gets in on the webpage \"urlBase\"",
   "keyword": "Given "
 });
 formatter.step({
   "line": 5,
-  "name": "I press the button with text \"pon tu anuncio gratis\"",
+  "name": "I press the button \"linkAnuncioGratis\"",
   "keyword": "When "
 });
 formatter.step({
   "line": 6,
-  "name": "I must see the button with text \"vale, tengo las fotos, vamos allá »\"",
+  "name": "I must see the button \"linkVamosAlla\"",
   "keyword": "Then "
 });
 formatter.step({
   "line": 7,
-  "name": "the user press the button with text \"vale, tengo las fotos, vamos allá »\"",
+  "name": "the user press the button \"linkVamosAlla\"",
   "keyword": "Given "
 });
 formatter.step({
   "line": 8,
-  "name": "I must see the button with Id \"doLogin\"",
+  "name": "I must see the button id \"linkDoLogin\"",
   "keyword": "Then "
 });
 formatter.match({
   "arguments": [
     {
-      "val": "http://www.idealista.es",
+      "val": "urlBase",
       "offset": 33
     }
   ],
   "location": "LanzadorSimpleCucumberIdealista.El_usuario_entra_en_pagina(String)"
 });
 formatter.result({
-  "duration": 1284103000,
+  "duration": 1030575000,
   "status": "passed"
 });
 formatter.match({
   "arguments": [
     {
-      "val": "pon tu anuncio gratis",
-      "offset": 30
+      "val": "linkAnuncioGratis",
+      "offset": 20
     }
   ],
   "location": "LanzadorSimpleCucumberIdealista.presionamos_boton_anuncios(String)"
 });
 formatter.result({
-  "duration": 975607000,
+  "duration": 986273000,
   "status": "passed"
 });
 formatter.match({
   "arguments": [
     {
-      "val": "vale, tengo las fotos, vamos allá »",
-      "offset": 33
+      "val": "linkVamosAlla",
+      "offset": 23
     }
   ],
   "location": "LanzadorSimpleCucumberIdealista.chequear_boton_vamos_alla(String)"
 });
 formatter.result({
-  "duration": 43574000,
+  "duration": 46284000,
   "status": "passed"
 });
 formatter.match({
   "arguments": [
     {
-      "val": "vale, tengo las fotos, vamos allá »",
-      "offset": 37
+      "val": "linkVamosAlla",
+      "offset": 27
     }
   ],
   "location": "LanzadorSimpleCucumberIdealista.presiono_boton_vamos_alla(String)"
 });
 formatter.result({
-  "duration": 576480000,
+  "duration": 607330000,
   "status": "passed"
 });
 formatter.match({
   "arguments": [
     {
-      "val": "doLogin",
-      "offset": 31
+      "val": "linkDoLogin",
+      "offset": 26
     }
   ],
   "location": "LanzadorSimpleCucumberIdealista.chequear_boton_vamos(String)"
 });
 formatter.result({
-  "duration": 14639000,
+  "duration": 28394000,
   "status": "passed"
 });
 });

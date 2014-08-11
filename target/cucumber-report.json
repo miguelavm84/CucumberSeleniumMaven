@@ -12,36 +12,36 @@
         "steps": [
           {
             "line": 4,
-            "name": "the user gets in on the webpage \"http://www.idealista.es\"",
+            "name": "the user gets in on the webpage \"urlBase\"",
             "keyword": "Given "
           },
           {
             "line": 5,
-            "name": "I press the button with text \"pon tu anuncio gratis\"",
+            "name": "I press the button \"linkAnuncioGratis\"",
             "keyword": "When "
           },
           {
             "line": 6,
-            "name": "I must see the button with text \"vale, tengo las fotos, vamos allá »\"",
+            "name": "I must see the button \"linkVamosAlla\"",
             "keyword": "Then "
           },
           {
             "line": 7,
-            "name": "the user press the button with text \"vale, tengo las fotos, vamos allá »\"",
+            "name": "the user press the button \"linkVamosAlla\"",
             "keyword": "Given "
           },
           {
             "result": {
-              "duration": 14639000,
+              "duration": 28394000,
               "status": "passed"
             },
             "line": 8,
-            "name": "I must see the button with Id \"doLogin\"",
+            "name": "I must see the button id \"linkDoLogin\"",
             "match": {
               "arguments": [
                 {
-                  "val": "doLogin",
-                  "offset": 31
+                  "val": "linkDoLogin",
+                  "offset": 26
                 }
               ],
               "location": "LanzadorSimpleCucumberIdealista.chequear_boton_vamos(String)"

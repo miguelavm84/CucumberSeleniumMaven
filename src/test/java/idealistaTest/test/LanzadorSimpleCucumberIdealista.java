@@ -30,27 +30,20 @@ public class LanzadorSimpleCucumberIdealista {
 		conectorSelenium.irA(nombrePagina);
 	}
 	
-	@When ("I press the button with text \"([^\"]*)\"")
+	@When ("I press the button \"([^\"]*)\"")
 	public void presionamos_boton_anuncios(String nombreBoton){
 		conectorSelenium.clickByLinkText(nombreBoton);
 	}
 	
-	@Then("I must see the button with text \"([^\"]*)\"")
+	@Then("I must see the button \"([^\"]*)\"")
 	public void chequear_boton_vamos_alla(String nombreBoton){
 		boolean present;
-		
-		try {
-			conectorSelenium.clickByLinkText(nombreBoton);
-		   present = true;
-		} catch (NoSuchElementException e) {
-		   present = false;
-		}
-		
+		present = conectorSelenium.isElementPresent(nombreBoton, "linkText");
 		assertTrue("No se encuentra el boton con texto " + nombreBoton , present);
 
 	}
 	
-	@Given ("the user press the button with text \"([^\"]*)\"")
+	@Given ("the user press the button \"([^\"]*)\"")
 	public void presiono_boton_vamos_alla (String nombreBoton)
 	{
 		boolean present;
@@ -65,18 +58,11 @@ public class LanzadorSimpleCucumberIdealista {
 		assertTrue("No se encuentra el boton con texto " + nombreBoton , present);
 	}
 
-	@Then("I must see the button with Id \"([^\"]*)\"")
+	@Then("I must see the button id \"([^\"]*)\"")
 	public void chequear_boton_vamos(String idBoton){
 		
 		boolean present;
-		
-		try {
-			conectorSelenium.clickById(idBoton);
-		   present = true;
-		} catch (NoSuchElementException e) {
-		   present = false;
-		}
-		
+		present = conectorSelenium.isElementPresent(idBoton, "id");
 		assertTrue("No se encuentra el boton con texto " + idBoton , present);
 
 	}
