@@ -1,6 +1,7 @@
 package idealistaTest.test;
 
 import static org.junit.Assert.*;
+import idealistaTest.util.WebConnector;
 
 import org.junit.Assert;
 import org.openqa.selenium.By;
@@ -15,31 +16,31 @@ import cucumber.annotation.Before;
 import cucumber.annotation.en.*;
 
 public class LanzadorSimpleCucumberIdealista {
-	protected WebDriver driver ;
+	
+	WebConnector conectorSelenium = new WebConnector();
 	
 	@Before
 	public void setUp(){
-		driver = new FirefoxDriver();
+		conectorSelenium.abrimosNavegador();
 	}
 
 	@Given ("the user gets in on the webpage \"([^\"]*)\"")
 	public void El_usuario_entra_en_pagina(String nombrePagina)
 	{
-		driver.get(nombrePagina);
+		conectorSelenium.irA(nombrePagina);
 	}
 	
 	@When ("I press the button with text \"([^\"]*)\"")
 	public void presionamos_boton_anuncios(String nombreBoton){
-		driver.findElement(By.linkText(nombreBoton)).click();
+		conectorSelenium.clickByLinkText(nombreBoton);
 	}
 	
 	@Then("I must see the button with text \"([^\"]*)\"")
 	public void chequear_boton_vamos_alla(String nombreBoton){
-		
 		boolean present;
 		
 		try {
-			driver.findElement(By.linkText(nombreBoton));
+			conectorSelenium.clickByLinkText(nombreBoton);
 		   present = true;
 		} catch (NoSuchElementException e) {
 		   present = false;
@@ -55,7 +56,7 @@ public class LanzadorSimpleCucumberIdealista {
 		boolean present;
 		
 		try {
-			driver.findElement(By.linkText(nombreBoton)).click();
+			conectorSelenium.clickByLinkText(nombreBoton);
 		   present = true;
 		} catch (NoSuchElementException e) {
 		   present = false;
@@ -70,7 +71,7 @@ public class LanzadorSimpleCucumberIdealista {
 		boolean present;
 		
 		try {
-			driver.findElement(By.id(idBoton));
+			conectorSelenium.clickById(idBoton);
 		   present = true;
 		} catch (NoSuchElementException e) {
 		   present = false;
@@ -83,7 +84,7 @@ public class LanzadorSimpleCucumberIdealista {
 	
 	@After
 	public void tearDown(){
-		driver.quit();
+		conectorSelenium.finSesionNavegador();
 	}
 
 }
