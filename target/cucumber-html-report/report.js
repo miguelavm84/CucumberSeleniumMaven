@@ -49,7 +49,7 @@ formatter.match({
   "location": "LanzadorSimpleCucumberIdealista.El_usuario_entra_en_pagina(String)"
 });
 formatter.result({
-  "duration": 1030575000,
+  "duration": 1704410000,
   "status": "passed"
 });
 formatter.match({
@@ -62,7 +62,7 @@ formatter.match({
   "location": "LanzadorSimpleCucumberIdealista.presionamos_boton_anuncios(String)"
 });
 formatter.result({
-  "duration": 986273000,
+  "duration": 1081762000,
   "status": "passed"
 });
 formatter.match({
@@ -75,7 +75,7 @@ formatter.match({
   "location": "LanzadorSimpleCucumberIdealista.chequear_boton_vamos_alla(String)"
 });
 formatter.result({
-  "duration": 46284000,
+  "duration": 46660000,
   "status": "passed"
 });
 formatter.match({
@@ -88,7 +88,7 @@ formatter.match({
   "location": "LanzadorSimpleCucumberIdealista.presiono_boton_vamos_alla(String)"
 });
 formatter.result({
-  "duration": 607330000,
+  "duration": 633982000,
   "status": "passed"
 });
 formatter.match({
@@ -101,7 +101,7 @@ formatter.match({
   "location": "LanzadorSimpleCucumberIdealista.chequear_boton_vamos(String)"
 });
 formatter.result({
-  "duration": 28394000,
+  "duration": 10565000,
   "status": "passed"
 });
 });

@@ -10,6 +10,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.safari.SafariDriver;
+import org.openqa.selenium.phantomjs.PhantomJSDriver;
 
 public class WebConnector {
 	//escribimos en el loging
@@ -51,12 +52,15 @@ public class WebConnector {
 		if (tipoNavegador.equals("Mozilla")){
 			driver = new FirefoxDriver();
 		}else if (tipoNavegador.equals("Chrome")) {
-			System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"//chromeDriver//chromedriver");
+			System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
 			driver = new ChromeDriver();
 		}else if (tipoNavegador.equals("Safari")) {
 			driver = new SafariDriver();
+		}else if (tipoNavegador.equals("Phantom")) {
+			driver = new PhantomJSDriver();
 		}else {
 			System.out.println("No hay driver definido");
+
 		}
 		driver.manage().window().maximize();
 		

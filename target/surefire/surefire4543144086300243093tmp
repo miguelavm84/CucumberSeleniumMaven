@@ -1,5 +1,5 @@
 #surefire
-#Mon Aug 11 08:37:42 CEST 2014
+#Wed Aug 13 09:57:32 CEST 2014
 dirscanner.0.params=/Users/miguelangelvilchezminan/Documents/Programacion/workspaceSeleniumCucumber/Cucumber_Selenium_Maven_Basico/target/test-classes|[**/Test*.java, **/*Test.java, **/*TestCase.java]|[**/*$*]
 enableAssertions=true
 testSuiteDefinitionTestSourceDirectory=/Users/miguelangelvilchezminan/Documents/Programacion/workspaceSeleniumCucumber/Cucumber_Selenium_Maven_Basico/src/test/java
